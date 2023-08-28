@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model BattleTeam {
+  id        Int       @id @default(autoincrement())
+  type      String    @db.VarChar(20)
+  leader    String    @db.VarChar(20)
+  monster1  String    @db.VarChar(20)
+  monster2  String    @db.VarChar(20)
+  speed     Int?
+  teamOrder Int?
+  note      String?   @db.VarChar(200)
+  createDt  DateTime? @db.Timestamp(0)
+}
+
+model Monster {
+  id    Int    @id @default(autoincrement())
+  type  String @db.VarChar(20)
+  name  String @db.VarChar(20)
+  grade String @db.VarChar(20)
+}
