@@ -1,0 +1,45 @@
+.wrap{
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  .title{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .row{
+    width: 50%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    position: relative;
+    label{
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      left:14px;
+      padding:10px;
+      background:white;
+      font-size:14px;
+      color:#888;
+      font-weight: bold;
+      span{
+        color:#da4841;
+        vertical-align: -1px;
+      }
+
+    }
+    input{
+      width: 100%;
+      border: 1px solid #dddddd !important;
+      line-height: 1.45;
+      font-size: 1rem;
+      letter-spacing: -0.04rem;
+      border-radius: 8px;
+      padding:16px;
+      margin-top:12px;
+    }
+  }
+}

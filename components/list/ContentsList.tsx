@@ -15,7 +15,7 @@ function ContentsList() {
       }
     }
 
-    fetchData()
+    fetchData().then()
   }, [])
 
   return (

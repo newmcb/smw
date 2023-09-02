@@ -1,18 +1,20 @@
 'use client'
 
 import React, { useState } from 'react'
-import { router } from 'next/client'
+import { useRouter } from 'next/navigation'
 import styles from './Header.module.scss'
 
 function Header() {
   const [isNav, setIsNav] = useState(false)
+  const router = useRouter()
 
   const handleNav = () => {
     setIsNav(!isNav)
   }
 
   const handleAddTeam = () => {
-    console.log('>>>>>>')
+    setIsNav(false)
+    router.replace('/add')
   }
 
   return (
